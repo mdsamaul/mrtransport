@@ -79,7 +79,7 @@ export default function SiteFooter() {
 
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-blue-300 uppercase tracking-[2px]">
           <p>© {new Date().getFullYear()} MR Transport Agency. All rights reserved.</p>
-          <p>Created by Mands IT</p>
+          <p>Created by <a href="https://mandsitbd.com" target="_blank" rel="noopener noreferrer" className="text-brand-red">Mands IT</a></p>
         </div>
       </div>
     </footer>
