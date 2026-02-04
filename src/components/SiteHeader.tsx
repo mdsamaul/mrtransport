@@ -1,70 +1,92 @@
 ﻿"use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { navLinks, siteConfig } from "@/lib/site";
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-blue font-display text-lg text-white">
+    <header 
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-2">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-blue font-display text-lg font-bold text-white">
             MR
           </div>
           <div>
-            <p className="font-display text-xl text-brand-blue">MR Transport Agency</p>
-            <p className="text-xs text-slate-600">চট্টগ্রাম ভিত্তিক পরিবহন সেবা</p>
+            <p className={`font-display text-xl font-bold leading-none ${scrolled ? "text-brand-blue" : "text-white"}`}>
+              MR Transport
+            </p>
+            <p className={`text-[10px] uppercase tracking-wider ${scrolled ? "text-slate-500" : "text-blue-100"}`}>
+              Agency
+            </p>
           </div>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+
+        <nav className="hidden items-center gap-8 text-sm font-semibold md:flex">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-brand-blue">
+            <Link 
+              key={link.href} 
+              href={link.href} 
+              className={`transition-colors hover:text-brand-red ${
+                scrolled ? "text-slate-700" : "text-white"
+              }`}
+            >
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/get-a-quote"
-            className="rounded-full bg-brand-red px-4 py-2 text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-red-600"
+          <a
+            href={`tel:${siteConfig.phone}`}
+            className="rounded-full bg-brand-red px-6 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
           >
-            কোটেশন নিন
-          </Link>
+            কল করুন
+          </a>
         </nav>
+
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="inline-flex items-center justify-center rounded-lg border border-slate-200 p-2 text-slate-700 md:hidden"
+          className={`inline-flex items-center justify-center rounded-lg p-2 md:hidden ${
+            scrolled ? "text-slate-700" : "text-white"
+          }`}
           aria-label="Toggle navigation"
-          aria-expanded={open}
         >
-          <span className="text-lg">☰</span>
+          <span className="text-2xl">{open ? "✕" : "☰"}</span>
         </button>
       </div>
+
+      {/* Mobile Menu */}
       {open && (
-        <div className="border-t border-slate-200 bg-white md:hidden">
-          <nav className="flex flex-col gap-3 px-4 py-4 text-sm font-medium text-slate-700">
+        <div className="absolute top-full left-0 w-full bg-white shadow-xl md:hidden animate-fade-in">
+          <nav className="flex flex-col border-t border-slate-100 p-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2 hover:bg-brand-light"
+                className="rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/get-a-quote"
-              className="rounded-lg bg-brand-red px-3 py-2 text-center text-white"
-              onClick={() => setOpen(false)}
-            >
-              কোটেশন নিন
-            </Link>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="rounded-lg border border-brand-blue px-3 py-2 text-center text-brand-blue"
+              className="mt-4 rounded-xl bg-brand-red py-3 text-center text-sm font-bold text-white"
+              onClick={() => setOpen(false)}
             >
               কল করুন
             </a>
