@@ -17,6 +17,7 @@ export const navLinks = [
   { label: "ফ্লিট", href: "#fleet" },
   { label: "সার্ভিস এরিয়া", href: "#service-areas" },
   { label: "কোটেশন", href: "#quote" },
+  { label: "পেমেন্ট", href: "#payment" },
   { label: "যোগাযোগ", href: "#contact" },
 ];
 

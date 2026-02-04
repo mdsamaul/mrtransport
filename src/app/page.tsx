@@ -2,6 +2,7 @@
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import QuoteForm from "@/components/QuoteForm";
+import PaymentSection from "@/components/PaymentSection";
 import Reveal from "@/components/Reveal";
 import {
   faqs,
@@ -330,6 +331,9 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Payment Section */}
+      <PaymentSection />
 
       {/* Contact Section */}
       <section id="contact" className="bg-slate-50 py-24 scroll-mt-20">
