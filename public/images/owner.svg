@@ -1,0 +1,36 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F5F7FB"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B2B52"/>
+      <stop offset="1" stop-color="#143D73"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="650" fill="url(#bg)"/>
+  <circle cx="170" cy="140" r="120" fill="#E53935" opacity="0.10"/>
+  <circle cx="760" cy="520" r="140" fill="#0B2B52" opacity="0.08"/>
+
+  <rect x="110" y="110" width="680" height="430" rx="36" fill="white" stroke="#E2E8F0"/>
+  <rect x="140" y="150" width="260" height="330" rx="28" fill="#F5F7FB"/>
+
+  <!-- Simple portrait placeholder -->
+  <circle cx="270" cy="260" r="78" fill="#0B2B52" opacity="0.12"/>
+  <circle cx="270" cy="250" r="58" fill="#0B2B52" opacity="0.18"/>
+  <path d="M210 390c18-46 56-68 60-68s42 22 60 68" fill="#0B2B52" opacity="0.16"/>
+
+  <rect x="430" y="170" width="320" height="44" rx="18" fill="url(#card)"/>
+  <rect x="430" y="232" width="260" height="16" rx="8" fill="#E53935" opacity="0.35"/>
+
+  <rect x="430" y="280" width="320" height="14" rx="7" fill="#0B2B52" opacity="0.12"/>
+  <rect x="430" y="306" width="300" height="14" rx="7" fill="#0B2B52" opacity="0.10"/>
+  <rect x="430" y="332" width="312" height="14" rx="7" fill="#0B2B52" opacity="0.09"/>
+  <rect x="430" y="358" width="276" height="14" rx="7" fill="#0B2B52" opacity="0.08"/>
+
+  <rect x="430" y="420" width="200" height="40" rx="20" fill="#E53935" opacity="0.9"/>
+  <rect x="640" y="420" width="110" height="40" rx="20" fill="#0B2B52" opacity="0.9"/>
+
+  <text x="590" y="199" text-anchor="middle" font-size="18" fill="#FFFFFF" font-family="Arial, sans-serif">Owner</text>
+</svg>

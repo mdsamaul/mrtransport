@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#F5F7FB"/>
+  <path d="M140 300 C160 220, 210 140, 280 120 C340 100, 420 140, 460 210 C500 280, 460 340, 380 350 C300 360, 220 340, 140 300 Z" fill="#0B2B52" opacity="0.2"/>
+  <circle cx="320" cy="230" r="16" fill="#E53935"/>
+  <circle cx="260" cy="260" r="10" fill="#0B2B52"/>
+  <circle cx="360" cy="270" r="10" fill="#0B2B52"/>
+  <text x="300" y="80" text-anchor="middle" font-size="20" fill="#0B2B52">Service Areas</text>
+</svg>
