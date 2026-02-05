@@ -11,13 +11,14 @@
 };
 
 export const navLinks = [
-  { label: "হোম", href: "/" },
-  { label: "আমাদের সম্পর্কে", href: "/about" },
-  { label: "সেবা", href: "/services" },
-  { label: "ফ্লিট", href: "/fleet" },
-  { label: "সার্ভিস এরিয়া", href: "/service-areas" },
-  { label: "কোটেশন", href: "/get-a-quote" },
-  { label: "যোগাযোগ", href: "/contact" },
+  { label: "হোম", href: "#home" },
+  { label: "আমাদের সম্পর্কে", href: "#about" },
+  { label: "সেবা", href: "#services" },
+  { label: "ফ্লিট", href: "#fleet" },
+  { label: "সার্ভিস এরিয়া", href: "#service-areas" },
+  { label: "কোটেশন", href: "#quote" },
+  { label: "পেমেন্ট", href: "#payment" },
+  { label: "যোগাযোগ", href: "#contact" },
 ];
 
 export const services = [
@@ -58,31 +59,31 @@ export const fleet = [
     title: "Covered Van",
     titleBn: "কভার্ড ভ্যান",
     capacity: "Capacity: 1.5–7 ton",
-    image: "/images/covered-van.svg",
+    image: "/images/covered-van.jpg",
   },
   {
     title: "Pickup",
     titleBn: "পিকআপ",
     capacity: "Capacity: 1–1.5 ton",
-    image: "/images/pickup.svg",
+    image: "/images/pickup.jpg",
   },
   {
     title: "Truck",
     titleBn: "ট্রাক",
     capacity: "Capacity: 5–20 ton",
-    image: "/images/truck.svg",
+    image: "/images/truck.jpg",
   },
   {
     title: "Container",
     titleBn: "কন্টেইনার",
     capacity: "Capacity: 20/40 ft",
-    image: "/images/container.svg",
+    image: "/images/container.jpg",
   },
   {
     title: "Trailer",
     titleBn: "ট্রেইলার",
     capacity: "Capacity: 25–40 ton",
-    image: "/images/trailer.svg",
+    image: "/images/trailer.jpg",
   },
 ];
 

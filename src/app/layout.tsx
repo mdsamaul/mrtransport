@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next";
-import { Hind_Siliguri, Saira_Condensed } from "next/font/google";
+import { Hind_Siliguri, Saira_Condensed, Inter } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -12,15 +12,21 @@ const bodyFont = Hind_Siliguri({
   variable: "--font-body",
 });
 
-const displayFont = Saira_Condensed({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const displayFont = Hind_Siliguri({
+  subsets: ["bengali", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-display",
+});
+  
+const inter = Hind_Siliguri({
+  subsets: ["bengali", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "MR Transport Agency | চট্টগ্রামের বিশ্বস্ত পরিবহন সেবা",
+    default: "MR Transport Agency | চট্টগ্রামে বিশ্বস্ত পরিবহন সেবা",
     template: "%s | MR Transport Agency",
   },
   description:
@@ -46,10 +52,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bn">
-      <body className={`${bodyFont.variable} ${displayFont.variable} font-body bg-slate-50 text-slate-900`}>
+    <html lang="bn" className="scroll-smooth">
+      <body className={`${bodyFont.variable} ${displayFont.variable} ${inter.variable} font-body bg-slate-50 text-slate-900 antialiased selection:bg-brand-blue selection:text-white`}>
         <SiteHeader />
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <SiteFooter />
         <FloatingActions />
       </body>
