@@ -11,7 +11,6 @@ import {
   serviceAreas,
   siteConfig,
   testimonials,
-  whyChooseUs,
 } from "@/lib/site";
 
 export const metadata = {

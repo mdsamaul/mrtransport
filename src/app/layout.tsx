@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next";
-import { Hind_Siliguri, Saira_Condensed, Inter } from "next/font/google";
+import { Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
