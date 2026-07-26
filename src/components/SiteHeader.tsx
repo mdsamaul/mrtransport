@@ -55,6 +55,12 @@ export default function SiteHeader() {
           >
             কল করুন
           </a>
+          <a
+            href="https://transport.bmhbd.org/mrtransportagency/login"
+            className="rounded-full bg-green-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-green-700 active:scale-95"
+          >
+            অ্যাডমিন লগইন
+          </a>
         </nav>
 
         <button
@@ -89,6 +95,13 @@ export default function SiteHeader() {
               onClick={() => setOpen(false)}
             >
               কল করুন
+            </a>
+            <a
+              href="https://transport.bmhbd.org/mrtransportagency/login"
+              className="mt-2 rounded-xl bg-green-600 py-3 text-center text-sm font-bold text-white hover:bg-green-700"
+              onClick={() => setOpen(false)}
+            >
+              অ্যাডমিন লগইন
             </a>
           </nav>
         </div>
